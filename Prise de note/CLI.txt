@@ -1,0 +1,12 @@
+symfony console doctrine:database:create => créer une base de donnée
+pour la création de la base de donnée si il y a une erreur il faut vérfier le fichier .env
+et repérer la ligne où il y a database
+à partir de la tu fais la connexion à la base de donnée, ne pas oublier le mot de passe !!
+
+
+Créer les entité avec: symfony console make:entity ne suffit pas pour créer une table dans la base donnée
+tu dois ensuite migrer ces informations vers la table, pour ce faire tu crées le script de migration avec:
+symfony console make:migration
+
+ensuite suite à cela, pour applique le script tu fais:
+symfony console doctrine:migrations:migrate
